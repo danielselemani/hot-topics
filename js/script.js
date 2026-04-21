@@ -1,9 +1,7 @@
-// GET THE REFERENCES
 const container = document.querySelector("#content");
 const links = document.querySelectorAll(".nav-link");
 let url = "./partials/home.html";
 
-// CREATE THE FUNCTION THAT WILL LOAD THE REQUESTED PARTIAL
 const loadContent = (urlFeed) => {
   fetch(urlFeed)
     .then((response) => {
@@ -21,10 +19,8 @@ const loadContent = (urlFeed) => {
     });
 };
 
-// CALL loadContent WITH THE CURRENT VALUE OF url
 loadContent(url);
 
-// CREATE THE FUNCTION THAT WILL SELECT A PARTIAL
 const selectContent = (event) => {
   event.preventDefault();
 
@@ -39,7 +35,6 @@ const selectContent = (event) => {
   loadContent(href);
 };
 
-// REGISTER links FOR CLICK EVENT WITH selectContent AS EVENT HANDLER
 links.forEach((link) => {
   link.addEventListener("click", selectContent);
 });

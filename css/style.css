@@ -1,0 +1,311 @@
+/* 
+Analogous color palette:
+#5c6f68
+#7b9189
+#a7b8b2
+#d7e0dc
+#f4f6f5
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.75rem;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+  color: #2d3432;
+  background-color: #f4f6f5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", Georgia, serif;
+  color: #4f625b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-bar,
+footer {
+  background-color: #d7e0dc;
+}
+
+.header-inner {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.logo-box {
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  margin-bottom: 0.8rem;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  background-color: #a7b8b2;
+  color: #2d3432;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #7b9189;
+  color: #ffffff;
+}
+
+.masthead {
+  background:
+    linear-gradient(rgba(92, 111, 104, 0.5), rgba(92, 111, 104, 0.5)),
+    url("../img/value-money.jpg") center / cover no-repeat;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.masthead-content {
+  padding: 3rem 0;
+}
+
+.masthead h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.masthead p {
+  color: #ffffff;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.main-section > h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #5c6f68;
+}
+
+.topic-article {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c2ccc8;
+}
+
+.topic-article:last-child {
+  border-bottom: none;
+}
+
+.topic-article h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+figure {
+  margin-bottom: 1rem;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 0.7rem;
+  color: #5c6f68;
+}
+
+.article-text p {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.source-note {
+  font-size: 0.95em;
+  color: #5c6f68;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer-inner {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.company-info {
+  margin-bottom: 1.5rem;
+}
+
+.company-info h2 {
+  margin-bottom: 0.8rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 0.6rem 0.5rem;
+  text-decoration: none;
+  color: #4f625b;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  color: #7b9189;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Tablet View */
+@media screen and (min-width: 35rem) {
+  html {
+    font-size: 1rem;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo-box {
+    margin-bottom: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-list li {
+    margin-bottom: 0;
+  }
+
+  .nav-link {
+    min-width: 150px;
+    text-align: center;
+  }
+
+  .article-layout {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .article-layout figure {
+    flex: 0 0 40%;
+    margin-bottom: 0;
+  }
+
+  .article-text {
+    flex: 0 0 60%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop View */
+@media screen and (min-width: 80rem) {
+  html {
+    font-size: 1.25rem;
+  }
+
+  .header-inner {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .masthead {
+    text-align: left;
+    min-height: 300px;
+  }
+
+  .main-section > h2,
+  .topic-article h2,
+  .footer-inner {
+    text-align: left;
+  }
+
+  .portfolio-intro {
+    text-align: left;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .company-info {
+    margin-bottom: 0;
+  }
+}
